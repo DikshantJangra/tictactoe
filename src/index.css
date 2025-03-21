@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --breakpoint-xs: 300px;
+  --breakpoint-xs: 450px;
 }
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

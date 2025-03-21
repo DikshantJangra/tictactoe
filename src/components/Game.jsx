@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Board from './Board'
 
-const Game = () => {
+const Game = ({colour}) => {
   const [history, sethistory] = useState([Array(9).fill(null)])
   const [currentMove, setcurrentMove] = useState(0)
   const currentSquare = history[currentMove]
@@ -33,7 +33,7 @@ const Game = () => {
   return (
     <>
     <div className=''>
-      <div><Board turn={turn} squares={currentSquare} onPlay={handlePlay} /></div>
+      <div><Board turn={turn} squares={currentSquare} onPlay={handlePlay} color={colour} /></div>
     </div>
     <div className='timeTravel font-medium text-2xl text-[#999] w-70'>
       <p className='pt-4 text-center font-semibold'>Steps</p>

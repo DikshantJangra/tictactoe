@@ -4,11 +4,11 @@ import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { FaRegCircle } from "react-icons/fa6";
 
 
-const Square = (({value, onSquareClick, redHighlights, greenHighlights}) =>{
-    return <button onClick={onSquareClick} className={`flex justify-center items-center text-3xl font-black border-r border-t border-[#999] h-25 w-25 ${redHighlights? 'text-red-600':  ''} ${greenHighlights? 'text-green-600' : ''}`}>{value}</button>
+const Square = (({value, onSquareClick, redHighlights, greenHighlights, color}) =>{
+    return <button onClick={onSquareClick} className={`flex justify-center items-center text-3xl font-black border-r border-t border-[#999] h-25 w-25 ${redHighlights? 'text-red-600':  color} ${greenHighlights? 'text-green-600' : color} hover:cursor-pointer`} >{value}</button>
   })
   
-function Board({ turn, squares, onPlay }){
+function Board({ turn, squares, onPlay, color }){
   // const [turn, setturn] = useState(true)
   // const [squares, setsquares] = useState(Array(9).fill(null))
   function handleClick(i){
@@ -70,6 +70,7 @@ function Board({ turn, squares, onPlay }){
             onSquareClick={()=>  handleClick(index)}
             redHighlights={redWinningLines.includes(index)}
             greenHighlights={greenWinningLines.includes(index)}
+            color={color}
           />
         ))}
         
