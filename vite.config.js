@@ -7,6 +7,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/dikshantjangra.github.io/',
+  base: '/tictactoe',
   plugins: [react(),tailwindcss()],
 })
