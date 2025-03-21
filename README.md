@@ -1,2 +1,1 @@
-# tictactoe
-Tic Tac Toe with React.js
+# TIC TAC TOE with react.js
